@@ -1,15 +1,11 @@
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
-
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Aliases
 alias pac="paru"
 alias nv="nvim"
+alias vim="nvim"
+alias vi="nvim"
 alias ls="eza -lha"
 
 # Environment Variables
