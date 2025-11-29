@@ -7,6 +7,7 @@ alias nv="nvim"
 alias vim="nvim"
 alias vi="nvim"
 alias ls="eza -lha"
+alias grep="rg"
 
 # Environment Variables
 set -gx GOPATH $HOME/.local/share/go
