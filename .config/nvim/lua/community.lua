@@ -5,7 +5,16 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
-  { import = "astrocommunity.color.transparent-nvim"},
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
+  { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.python-ruff" },
+  { import = "astrocommunity.pack.fish" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
 }
