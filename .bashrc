@@ -11,3 +11,5 @@ PS1='[\u@\h \W]\$ '
 
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+
+. "$HOME/.local/bin/env"

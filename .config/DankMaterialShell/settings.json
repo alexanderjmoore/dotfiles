@@ -160,7 +160,7 @@
   "useAutoLocation": false,
   "weatherEnabled": false,
   "networkPreference": "ethernet",
-  "vpnLastConnected": "",
+  "vpnLastConnected": "1040d1e5-8738-4280-97dc-448b3f17f5a9",
   "iconTheme": "System Default",
   "launcherLogoMode": "os",
   "launcherLogoCustomPath": "",
