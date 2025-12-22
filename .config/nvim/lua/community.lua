@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
   { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.fish" },
