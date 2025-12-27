@@ -18,6 +18,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.completion.supermaven-nvim" },
 }
