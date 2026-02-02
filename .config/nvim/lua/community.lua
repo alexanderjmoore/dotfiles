@@ -7,8 +7,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
-  { import = "astrocommunity.recipes.cache-colorscheme" },
-  -- { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.python-ruff" },
@@ -19,5 +17,4 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
-  -- { import = "astrocommunity.completion.supermaven-nvim" },
 }

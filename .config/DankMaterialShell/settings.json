@@ -58,6 +58,7 @@
   "controlCenterShowMicPercent": false,
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
+  "controlCenterShowScreenSharingIcon": true,
   "showPrivacyButton": true,
   "privacyShowMicIcon": false,
   "privacyShowCameraIcon": false,
@@ -172,7 +173,7 @@
   "useAutoLocation": false,
   "weatherEnabled": false,
   "networkPreference": "ethernet",
-  "vpnLastConnected": "1040d1e5-8738-4280-97dc-448b3f17f5a9",
+  "vpnLastConnected": "1d1b21fb-c6c8-4ba6-a46a-769cc094f6d8",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
