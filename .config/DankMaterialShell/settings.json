@@ -1,8 +1,15 @@
 {
   "currentThemeName": "blue",
   "currentThemeCategory": "generic",
-  "customThemeFile": "",
-  "registryThemeVariants": {},
+  "customThemeFile": "/home/alex/.config/DankMaterialShell/themes/flexoki/theme.json",
+  "registryThemeVariants": {
+    "catppuccin": {
+      "flavor": "mocha",
+      "accent": "blue"
+    },
+    "gruvboxMaterial": "soft",
+    "rosePine": "dawn"
+  },
   "matugenScheme": "scheme-tonal-spot",
   "runUserMatugenTemplates": true,
   "matugenTargetMonitor": "",
@@ -24,7 +31,7 @@
   "showSeconds": false,
   "useFahrenheit": false,
   "nightModeEnabled": false,
-  "animationSpeed": 1,
+  "animationSpeed": 2,
   "customAnimationDuration": 500,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
@@ -113,7 +120,7 @@
   "maxWorkspaceIcons": 3,
   "groupWorkspaceApps": true,
   "workspaceFollowFocus": false,
-  "showOccupiedWorkspacesOnly": false,
+  "showOccupiedWorkspacesOnly": true,
   "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
@@ -161,8 +168,8 @@
     }
   ],
   "centeringMode": "index",
-  "clockDateFormat": "",
-  "lockDateFormat": "",
+  "clockDateFormat": "ddd MMM d",
+  "lockDateFormat": "ddd MMM d",
   "mediaSize": 1,
   "appLauncherViewMode": "grid",
   "spotlightModalViewMode": "list",
@@ -197,7 +204,7 @@
   "launcherLogoColorInvertOnMode": false,
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
-  "launcherLogoSizeOffset": 0,
+  "launcherLogoSizeOffset": 5,
   "fontFamily": "Inter Variable",
   "monoFontFamily": "Fira Code",
   "fontWeight": 400,
@@ -264,7 +271,7 @@
   "showDock": false,
   "dockAutoHide": false,
   "dockGroupByApp": false,
-  "dockOpenOnOverview": false,
+  "dockOpenOnOverview": true,
   "dockPosition": 1,
   "dockSpacing": 4,
   "dockBottomGap": 0,
@@ -420,7 +427,8 @@
       "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4
+      "popupGapsManual": 4,
+      "widgetOutlineEnabled": false
     }
   ],
   "desktopClockEnabled": false,
@@ -492,7 +500,84 @@
   "systemMonitorVariants": [],
   "desktopWidgetPositions": {},
   "desktopWidgetGridSettings": {},
-  "desktopWidgetInstances": [],
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1769995865655_5onj7drvg",
+      "widgetType": "desktopClock",
+      "name": "Desktop Clock",
+      "enabled": false,
+      "config": {
+        "style": "analog",
+        "transparency": 0.8,
+        "colorMode": "primary",
+        "customColor": "#ffffff",
+        "showDate": true,
+        "showAnalogNumbers": false,
+        "showAnalogSeconds": true,
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "ROG PG279Q": {
+          "width": 200,
+          "height": 200,
+          "x": 1180,
+          "y": 620
+        },
+        "27ML1U": {
+          "width": 200,
+          "height": 200,
+          "x": 1180,
+          "y": 620
+        }
+      }
+    },
+    {
+      "id": "dw_1769995871519_g3mczzwg6",
+      "widgetType": "systemMonitor",
+      "name": "System Monitor",
+      "enabled": false,
+      "config": {
+        "showHeader": true,
+        "transparency": 0.8,
+        "colorMode": "primary",
+        "customColor": "#ffffff",
+        "showCpu": true,
+        "showCpuGraph": true,
+        "showCpuTemp": true,
+        "showGpuTemp": false,
+        "gpuPciId": "",
+        "showMemory": true,
+        "showMemoryGraph": true,
+        "showNetwork": true,
+        "showNetworkGraph": true,
+        "showDisk": true,
+        "showTopProcesses": false,
+        "topProcessCount": 3,
+        "topProcessSortBy": "cpu",
+        "layoutMode": "auto",
+        "graphInterval": 60,
+        "displayPreferences": [
+          "all"
+        ]
+      },
+      "positions": {
+        "ROG PG279Q": {
+          "width": 320,
+          "height": 480,
+          "x": 1120,
+          "y": 480
+        },
+        "27ML1U": {
+          "width": 320,
+          "height": 480,
+          "x": 1120,
+          "y": 480
+        }
+      }
+    }
+  ],
   "desktopWidgetGroups": [],
   "builtInPluginSettings": {
     "dms_settings_search": {

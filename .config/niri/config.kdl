@@ -426,3 +426,5 @@ debug {
 }
 
 include "dms/outputs.kdl"
+
+include "dms/cursor.kdl"
