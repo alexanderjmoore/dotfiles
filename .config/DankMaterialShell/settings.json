@@ -181,10 +181,10 @@
   "weatherEnabled": false,
   "networkPreference": "ethernet",
   "vpnLastConnected": "1d1b21fb-c6c8-4ba6-a46a-769cc094f6d8",
-  "iconTheme": "System Default",
+  "iconTheme": "breeze-dark",
   "cursorSettings": {
-    "theme": "System Default",
-    "size": 24,
+    "theme": "Adwaita",
+    "size": 16,
     "niri": {
       "hideWhenTyping": false,
       "hideAfterInactiveMs": 0
@@ -246,7 +246,7 @@
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
-  "terminalsAlwaysDark": false,
+  "terminalsAlwaysDark": true,
   "runDmsMatugenTemplates": true,
   "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
