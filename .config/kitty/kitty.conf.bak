@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_THEME
-# Afterglow
+# Alabaster Dark
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -11,7 +11,7 @@ include current-theme.conf
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family      FiraCode Nerd Font
+font_family      JetBrainsMono Nerd Font Mono # FiraCode Nerd Font Mono
 # bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
@@ -25,7 +25,7 @@ font_family      FiraCode Nerd Font
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-# font_size 11.0
+font_size 12.0
 
 #: Font size (in pts).
 
@@ -1738,7 +1738,7 @@ background_opacity 0.8
 #: config is not supported. Note that if kitty is invoked with command
 #: line arguments specifying a command to run, this option is ignored.
 
-# clipboard_control write-clipboard write-primary read-clipboard-ask read-primary-ask
+clipboard_control write-clipboard write-primary
 
 #: Allow programs running in kitty to read and write from the
 #: clipboard. You can control exactly which actions are allowed. The
