@@ -66,4 +66,3 @@ function y() {
 
 
 eval "$(zoxide init zsh)"
-
