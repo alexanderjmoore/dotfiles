@@ -14,7 +14,7 @@ return {
   { import = "astrocommunity.pack.python.base" },
   { import = "astrocommunity.pack.python.basedpyright" },
   { import = "astrocommunity.pack.python.ruff" },
-  { import = "astrocommunity.pack.fish" },
+  { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
