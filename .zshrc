@@ -19,21 +19,16 @@ export BAT_PAGER=""
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
 
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting golang brew colorize eza fzf kitty python rsync systemd tmux ufw uv zoxide)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting golang brew colorize eza fzf kitty python rsync systemd ufw uv zoxide)
 
 source $ZSH/oh-my-zsh.sh
-
 
 alias pac="paru"
 alias vim="nvim"
 alias vi="nvim"
-
 
 function cat() {
   local f
@@ -51,7 +46,6 @@ function cat() {
   done
 }
 
-
 function y() {
   local tmp cwd
   tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
@@ -61,8 +55,6 @@ function y() {
   rm -f -- "$tmp"
 }
 
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 eval "$(zoxide init zsh)"
