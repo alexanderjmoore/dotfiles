@@ -1,6 +1,3 @@
-# Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 # Aliases
 alias pac="paru"
 alias vim="nvim"
@@ -24,6 +21,3 @@ function jellyfinmediaplayer
     env QT_QPA_PLATFORM=xcb jellyfinmediaplayer $argv
 end
 
-function torbrowser-launcher
-    env QT_QPA_PLATFORM=xcb torbrowser-launcher $argv
-end
