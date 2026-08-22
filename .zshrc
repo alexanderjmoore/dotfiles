@@ -27,8 +27,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting golang brew colorize ez
 source $ZSH/oh-my-zsh.sh
 
 alias pac="paru"
-alias vim="nvim"
-alias vi="nvim"
 
 function cat() {
   local f
