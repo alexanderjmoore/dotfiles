@@ -8,7 +8,6 @@ return {
   { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python.base" },
