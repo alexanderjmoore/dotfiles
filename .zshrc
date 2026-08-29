@@ -1,63 +1,100 @@
+# Powerlevel10k instant prompt. Keep close to the top.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vi'
-else
-  export EDITOR='nvim'
-fi
-
+# Environment
 export LANG=en_US.UTF-8
 export GOPATH="$HOME/.local/go"
-export PATH="$HOME/.config/emacs/bin:$HOME/bin:$HOME/.local/bin:$GOPATH/bin:/usr/local/bin:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
-export EDITOR=nvim
-export VISUAL=nvim
-export GTK_THEME=Adwaita:dark
-export BAT_PAGER=""
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR=vi
+  export VISUAL=vi
+else
+  export EDITOR=nvim
+  export VISUAL=nvim
+fi
+
+export SUDO_EDITOR="$EDITOR"
+export BAT_PAGER=""
+export EZA_ICONS_AUTO=1
+
+# PATH
+typeset -U path PATH
+path=(
+  "$HOME/.local/bin"
+  "$HOME/bin"
+  "$GOPATH/bin"
+  "$HOME/.lmstudio/bin"
+  /usr/local/bin
+  $path
+)
+
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 14
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting golang brew colorize eza fzf kitty python rsync systemd ufw uv zoxide)
+plugins=(
+  git
+  zsh-autosuggestions
+  golang
+  eza
+  fzf
+  kitty
+  python
+  rsync
+  systemd
+  ufw
+  uv
+  zoxide
+  zsh-syntax-highlighting
+)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
+# Aliases
 alias pac="paru"
+alias rm="trash"
 
+# Pretty file viewer masquerading as cat.
 function cat() {
+  if (($# == 0)); then
+    command cat
+    return
+  fi
+
+  if [[ "$1" == -* ]]; then
+    command cat "$@"
+    return
+  fi
+
   local f
   for f in "$@"; do
-    # If it's a markdown file
     if [[ -f "$f" && "$f" == *.md ]]; then
       glow "$f"
-    # If it's a regular file (non-markdown)
     elif [[ -f "$f" ]]; then
       bat "$f"
     else
-      # Fallback for stdin, dirs, errors, etc.
       command cat "$f"
     fi
   done
 }
 
+# Yazi wrapper: change the shell's working directory when Yazi exits.
 function y() {
   local tmp cwd
+
   tmp="$(mktemp -t yazi-cwd.XXXXXX)" || return
   command yazi "$@" --cwd-file="$tmp"
+
   cwd="$(<"$tmp")"
   [[ -n "$cwd" && "$cwd" != "$PWD" && -d "$cwd" ]] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
+
+  command rm -f -- "$tmp"
 }
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-eval "$(zoxide init zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/alex/.lmstudio/bin"
-# End of LM Studio CLI section
-
+# Powerlevel10k configuration
+[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
