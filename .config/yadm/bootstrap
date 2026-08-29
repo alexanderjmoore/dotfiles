@@ -108,7 +108,6 @@ packages=(
   glow
   less
   ripgrep
-  superfile
   tealdeer
   trash-cli
   tree
