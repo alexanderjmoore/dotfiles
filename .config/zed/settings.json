@@ -14,39 +14,8 @@
     {
       "host": "dev",
       "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/alex"
-          ]
-        },
-        {
-          "paths": [
-            "/home/alex/src/codex/network-simulator/./"
-          ]
-        },
-        {
-          "paths": [
-            "/home/alex/src/codex/task-tracker"
-          ]
-        },
-        {
-          "paths": [
-            "/home/alex/src/go/snippetbox/./"
-          ]
-        }
-      ]
-    },
-    {
-      "host": "dev",
-      "args": [],
       "projects": []
     },
-    {
-      "host": "dev",
-      "args": [],
-      "projects": []
-    }
   ],
   "disable_ai": true,
   "collaboration_panel": {
@@ -80,7 +49,7 @@
   "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
 }
