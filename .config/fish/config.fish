@@ -21,3 +21,8 @@ function jellyfinmediaplayer
     env QT_QPA_PLATFORM=xcb jellyfinmediaplayer $argv
 end
 
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/alex/.lmstudio/bin
+# End of LM Studio CLI section
+

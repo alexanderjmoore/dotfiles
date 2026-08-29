@@ -50,3 +50,8 @@ alias v='vim'
 mkcd() {
   mkdir -p -- "$1" && cd -- "$1"
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/alex/.lmstudio/bin"
+# End of LM Studio CLI section
+

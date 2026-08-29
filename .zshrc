@@ -56,3 +56,8 @@ function y() {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval "$(zoxide init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/alex/.lmstudio/bin"
+# End of LM Studio CLI section
+
