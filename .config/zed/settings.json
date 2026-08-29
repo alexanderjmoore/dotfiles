@@ -61,7 +61,7 @@
     "model_parameters": []
   },
   "buffer_line_height": "standard",
-  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "icon_theme": "Catppuccin Mocha",
   "telemetry": {
     "diagnostics": false,
