@@ -2,10 +2,41 @@
 return function(options)
     return function()
         local moving = hl.get_active_window()
+        if not moving then return end
+
+        local move_options = options
+        if options.monitor == "l" or options.monitor == "r" or options.monitor == "u" or options.monitor == "d" then
+            local source_monitor = moving.monitor
+            local source_x = source_monitor.x + source_monitor.width / 2
+            local source_y = source_monitor.y + source_monitor.height / 2
+            local target_monitor
+            local target_distance
+
+            for _, monitor in ipairs(hl.get_monitors()) do
+                if monitor.id ~= source_monitor.id then
+                    local target_x = monitor.x + monitor.width / 2
+                    local target_y = monitor.y + monitor.height / 2
+                    local valid = (options.monitor == "l" and target_x < source_x)
+                        or (options.monitor == "r" and target_x > source_x)
+                        or (options.monitor == "u" and target_y < source_y)
+                        or (options.monitor == "d" and target_y > source_y)
+                    local distance = (target_x - source_x) ^ 2 + (target_y - source_y) ^ 2
+                    if valid and (not target_distance or distance < target_distance) then
+                        target_monitor = monitor
+                        target_distance = distance
+                    end
+                end
+            end
+
+            -- At the outer edge, silently leave the window where it is.
+            if not target_monitor then return end
+            move_options = { monitor = target_monitor.name }
+        end
+
         local source = moving and moving.workspace
         local source_id = source and source.id
         local was_scrolling = moving and not moving.floating and moving.layout.name == "scrolling"
-        hl.dispatch(hl.dsp.window.move(options))
+        hl.dispatch(hl.dsp.window.move(move_options))
         if not was_scrolling or not moving.workspace or moving.workspace.id == source_id then return end
 
         local focused = hl.get_active_window()
