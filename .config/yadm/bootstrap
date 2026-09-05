@@ -67,14 +67,10 @@ if ! command -v paru >/dev/null 2>&1; then
   git clone https://aur.archlinux.org/paru.git "$tmpdir/paru"
 
   (
-    cd $tmpdir/paru
+    cd "$tmpdir/paru"
 
-    env \
-      -u CC \
-      -u CXX \
-      -u LD \
-      -u CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER \
-      makepkg -si --noconfirm
+    CARGO_TARGET_X86_64_UNKNOWN_LINUX_GNU_LINKER=gcc \
+      makepkg -si --needed --noconfirm
   )
 
   rm -rf "$tmpdir"
