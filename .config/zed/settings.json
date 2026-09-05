@@ -8,14 +8,31 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "terminal": {
+    "dock": "right",
     "font_size": 16.0
   },
   "ssh_connections": [
     {
       "host": "dev",
       "args": [],
-      "projects": []
+      "projects": [
+        {
+          "paths": [
+            "/home/alex"
+          ]
+        },
+        {
+          "paths": [
+            "/home/alex/src/web/lapsing-liminal"
+          ]
+        }
+      ]
     },
+    {
+      "host": "dev",
+      "args": [],
+      "projects": []
+    }
   ],
   "disable_ai": true,
   "collaboration_panel": {

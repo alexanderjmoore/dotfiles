@@ -58,6 +58,7 @@ source "$ZSH/oh-my-zsh.sh"
 # Aliases
 alias pac="paru"
 alias rm="trash"
+alias c="clear"
 
 # Pretty file viewer masquerading as cat.
 function cat() {
