@@ -30,8 +30,12 @@ hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(noctCall .. "window-switcher"))
 -- Move active window around workspaces & monitors
 local moveScrollingWindow = require("config.scrolling_move")
 hl.bind(mainMod .. " + SHIFT + Up", moveWindow({ direction = "u" }))
-hl.bind(mainMod .. " + SHIFT + Right", function() moveScrollingWindow("r") end)
-hl.bind(mainMod .. " + SHIFT + Left", function() moveScrollingWindow("l") end)
+hl.bind(mainMod .. " + SHIFT + Right", function()
+	moveScrollingWindow("r")
+end)
+hl.bind(mainMod .. " + SHIFT + Left", function()
+	moveScrollingWindow("l")
+end)
 hl.bind(mainMod .. " + SHIFT + Down", moveWindow({ direction = "d" }))
 hl.bind(mainMod .. " + SHIFT + 1", moveWindow({ monitor = MONITOR1 }))
 hl.bind(mainMod .. " + SHIFT + 2", moveWindow({ monitor = MONITOR2 }))
@@ -172,3 +176,11 @@ hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }
 -- Special workspace (scratchpad)
 -- hl.bind(mainMod .. " + SHIFT + S", moveWindow({ workspace = "special" }))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special())
+
+-- Rebind caps lock to esc
+hl.config({
+	input = {
+		kb_layout = "us",
+		kb_options = "caps:escape",
+	},
+})
