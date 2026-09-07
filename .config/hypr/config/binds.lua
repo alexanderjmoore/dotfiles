@@ -141,6 +141,9 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(noctCall .. "panel-toggle clipboard")
 -- Notifications
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(noctCall .. "panel-toggle control-center notifications"))
 
+-- Notes
+hl.bind("SUPER + N", hl.dsp.exec_cmd("noctalia msg panel-toggle noctalia/notes:panel"))
+
 -------------------------------
 ---- WORKSPACES & MONITORS ----
 -------------------------------
@@ -176,6 +179,10 @@ hl.bind(mainMod .. " + CONTROL + mouse_down", hl.dsp.focus({ workspace = "m+1" }
 -- Special workspace (scratchpad)
 -- hl.bind(mainMod .. " + SHIFT + S", moveWindow({ workspace = "special" }))
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special())
+
+-------------------------
+---- Keyboard Remaps ----
+-------------------------
 
 -- Rebind caps lock to esc
 hl.config({

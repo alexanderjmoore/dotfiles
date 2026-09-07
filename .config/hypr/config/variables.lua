@@ -4,7 +4,7 @@ TERMINAL = "kitty"
 FILE_MANAGER = "dolphin"
 BROWSER = "firefox"
 EDITOR = "nvim"
-CALCULATOR = "gnome-calculator"
+CALCULATOR = "kcalc"
 
 -- Monitors
 MONITOR1 = "DP-3"
