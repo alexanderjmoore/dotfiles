@@ -9,7 +9,6 @@ CALCULATOR = "kcalc"
 -- Monitors
 MONITOR1 = "DP-3"
 MONITOR2 = "DP-2"
-MONITOR3 = ""
 PRIMARY_MONITOR = MONITOR2
 
 -- Workspaces

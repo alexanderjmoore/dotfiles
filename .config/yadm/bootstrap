@@ -81,16 +81,6 @@ fi
 
 # -----------------------------------------------------------------------------
 # Packages
-#
-# Keep this list distro-neutral within the Arch ecosystem.
-#
-# Do NOT put things here that depend strongly on the machine:
-#   - NVIDIA / AMD drivers
-#   - kernel packages
-#   - bootloaders
-#   - Plasma / Hyprland / desktop environments
-#   - Snapper / Btrfs configuration
-#   - CachyOS-specific packages
 # -----------------------------------------------------------------------------
 
 packages=(
@@ -126,6 +116,7 @@ packages=(
   # Development
   github-cli
   go
+  lazygit
   lua51
   luarocks
   npm
@@ -134,7 +125,6 @@ packages=(
   uv
 
   # Networking / administration
-  bind
   iperf3
   net-tools
   nfs-utils
@@ -146,7 +136,6 @@ packages=(
   # Arch tooling
   pacman-contrib
   pkgfile
-  yadm
   yay-bin
 
   # Desktop integration
@@ -160,6 +149,9 @@ packages=(
   unzip
   wget
 
+  # Audio
+  easyeffects
+
   # Fonts
   ttf-firacode-nerd
   ttf-jetbrains-mono-nerd
@@ -171,9 +163,6 @@ paru -S --needed --noconfirm "${packages[@]}"
 
 # -----------------------------------------------------------------------------
 # Oh My Zsh
-#
-# These are cloned rather than tracked by yadm. This leaves each upstream
-# project as a real Git repository that can be updated normally.
 # -----------------------------------------------------------------------------
 
 info "Installing shell framework"
@@ -208,8 +197,6 @@ clone_if_missing \
 
 # -----------------------------------------------------------------------------
 # Yazi
-#
-# package.toml should be tracked by yadm. The packages themselves should not.
 # -----------------------------------------------------------------------------
 
 if [[ -f "$HOME/.config/yazi/package.toml" ]]; then
@@ -251,6 +238,5 @@ printf 'Remaining machine-specific setup may include:\n'
 printf '  - GPU drivers\n'
 printf '  - desktop environment / window manager\n'
 printf '  - filesystem and snapshot configuration\n'
-printf '  - EasyEffects plugins/presets\n'
 printf '  - application-specific authentication\n'
 printf '\n'

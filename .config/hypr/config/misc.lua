@@ -18,9 +18,9 @@ hl.config({
         no_donation_nag = true,
     },
     misc = {
-        col = {
-            splash = CACHYLGREEN,
-        },
+        -- Noctalia provides the wallpaper; hide Hyprland's background branding.
+        disable_hyprland_logo = true,
+        disable_splash_rendering = true,
         middle_click_paste = false,
         enable_swallow = true,
         swallow_regex = "(kitty|ghostty|[Kk]onsole|Alacritty|gnome-terminal|xfce[0-9]?-terminal)",

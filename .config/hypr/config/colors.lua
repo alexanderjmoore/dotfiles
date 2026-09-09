@@ -1,11 +1,8 @@
--- Cachy colors
-
-CACHYLGREEN = "rgba(82dcccff)"
-CACHYMGREEN = "rgba(00aa84ff)"
-CACHYDGREEN = "rgba(007d6fff)"
-CACHYLBLUE  = "rgba(01ccffff)"
-CACHYMBLUE  = "rgba(182545ff)"
-CACHYDBLUE  = "rgba(111826ff)"
-CACHYWHITE  = "rgba(ffffffff)"
-CACHYGREY   = "rgba(ddddddff)"
-CACHYGRAY   = "rgba(798bb2ff)"
+-- Tokyo Night colors, matched to Noctalia's generated palette.
+-- These compositor colors are static; update them if the shell theme changes.
+return {
+    primary = "rgba(7aa2f7ff)",
+    secondary = "rgba(bb9af7ff)",
+    outline = "rgba(3d4355ff)",
+    surface_variant = "rgba(333954ff)",
+}

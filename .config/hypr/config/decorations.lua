@@ -1,4 +1,5 @@
--- Look and feel configuration
+-- Compositor appearance; shell and app themes are managed by Noctalia.
+local colors = require("config.colors")
 
 hl.config({
     general = {
@@ -9,25 +10,25 @@ hl.config({
         resize_on_border = true,
         col = {
             active_border = {
-                colors = { CACHYLGREEN, CACHYDGREEN },
+                colors = { colors.primary, colors.secondary },
                 angle = 45,
             },
-            inactive_border = CACHYGRAY,
+            inactive_border = colors.outline,
         },
     },
     group = {
         col = {
-            border_active = CACHYLBLUE,
-            border_inactive = CACHYGRAY,
-            border_locked_active = CACHYDBLUE,
-            border_locked_inactive = CACHYGRAY,
+            border_active = colors.secondary,
+            border_inactive = colors.outline,
+            border_locked_active = colors.surface_variant,
+            border_locked_inactive = colors.outline,
         },
         groupbar = {
             col = {
-                active = CACHYLGREEN,
-                inactive = CACHYGRAY,
-                locked_active = CACHYDBLUE,
-                locked_inactive = CACHYGRAY,
+                active = colors.primary,
+                inactive = colors.outline,
+                locked_active = colors.surface_variant,
+                locked_inactive = colors.outline,
             },
         },
     },
