@@ -12,7 +12,8 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("hyprctl kill"), { description =
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Close the active window" })
 hl.bind(mainMod .. " + ALT + Space", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating window" })
 hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = 1 }), { description = "Toggle maximized window" })
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen(), { description = "Toggle fullscreen" })
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }), { description = "Toggle maximized window" })
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen(), { description = "Toggle fullscreen" })
 hl.bind(mainMod .. " + J", hl.dsp.layout("promote"), { description = "Move window into its own column" })
 
 -- Cycle column widths; Super+J moves a stacked window into its own column.
@@ -152,6 +153,8 @@ hl.bind("SUPER + K", hl.dsp.exec_cmd("noctalia msg panel-toggle kenn/keybind-che
 -- Focus on monitors
 hl.bind(mainMod .. " + 1", hl.dsp.focus({ monitor = MONITOR1 }), { description = "Focus monitor 1" })
 hl.bind(mainMod .. " + 2", hl.dsp.focus({ monitor = MONITOR2 }), { description = "Focus monitor 2" })
+hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ monitor = "l" }), { description = "Focus monitor on the left" })
+hl.bind(mainMod .. " + CONTROL + Right", hl.dsp.focus({ monitor = "r" }), { description = "Focus monitor on the right" })
 
 -- Focus on workspace number
 -- Absolute
@@ -165,9 +168,7 @@ for i = 1, NUM_WPM do
 	hl.bind(mainMod .. " + CONTROL + " .. key, hl.dsp.focus({ workspace = "m~" .. i }), { description = "Focus workspace " .. i .. " on this monitor" })
 end
 
--- Move to adjacent workspaces and next empty on a given monitor
-hl.bind(mainMod .. " + CONTROL + Right", hl.dsp.focus({ workspace = "m+1" }), { description = "Next workspace on this monitor" })
-hl.bind(mainMod .. " + CONTROL + Left", hl.dsp.focus({ workspace = "m-1" }), { description = "Previous workspace on this monitor" })
+-- Move to the next empty workspace on a given monitor
 hl.bind(mainMod .. " + CONTROL + Down", hl.dsp.focus({ workspace = "emptym" }), { description = "Focus empty workspace on this monitor" })
 
 -- Scroll columns with Super; keep Control+Super for workspaces

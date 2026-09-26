@@ -3,6 +3,10 @@ hl.config({
     general = {
         layout = "scrolling",
     },
+    binds = {
+        -- Let directional focus reach neighboring columns while maximized.
+        movefocus_cycles_fullscreen = true,
+    },
     scrolling = {
         direction = "right",
         column_width = 0.5,
